@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="UTF-8">
+<meta content="yes" name="apple-mobile-web-app-capable"></meta>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"></meta>
+<meta name="format-detection" content="telephone=no"></meta>
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"></meta>
+<meta content="yes" name="full-screen"></meta>
+<meta content="true" name="x5-fullscreen"></meta>
+<meta content="application" name="browsermode"></meta>
+<title>电子签到表格</title>
+<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="http://www.buu-cn.com/weixinplugins/js/form_validation.js"></script>
+<link href="buu_yqh.css?0.7" type="text/css" rel="stylesheet"/>
+<script>
+
+//验证报名信息
+function checkForm() {
+   var add_name=$("#add_name");
+   var add_tel=$("#add_tel");
+   var add_code=$("#add_code");
+   var add_area=$("#add_area");
+   var add_adress_text=$("#add_adress_text");
+   if(add_name.val()=="")
+   {
+	    showTips("请输入您的名字哦！","");
+	    add_name.focus();
+		return false;   
+   }
+   if(add_tel.val()=="")
+   {
+	    showTips("您还没有输入您的手机号呢！","");
+	    add_tel.focus();
+		return false;   
+   }
+   if(!checkMobile(add_tel.val()))
+		{
+		   showTips("手机号只能为11数字呢！","")
+		   add_tel.focus();
+		   return false;
+		}
+   if(add_code.val()=="")
+   {
+	    showTips("您还没有输入您的公司名称呢！","");
+	    add_code.focus();
+		return false;   
+   }
+   if(add_adress_text.val()=="")
+   {
+	    showTips("您还没有输入您的公司地址呢！","");
+	    add_adress_text.focus();
+		return false;   
+   }
+    return true;
+}
+
+
+function saveAlliance(){
+	if(checkForm()){
+		var name = $("#name").val();
+		var sex = $("#sex").val();
+		var age = $("#age").val();
+		var qq = $("#qq").val();
+		var serviceranage = $("#serviceranage").val();
+		var servicearea = $("#servicearea").val();
+		var cellphone = $("#cellphone").val();
+		var verificationCode = $("#verificationCode").val();
+		$.post(  
+				'../json/saveAlliance.action',        //服务器要接受的url  
+	         {
+					name:name,
+					sex:sex,
+					age:age,
+					qq:qq,
+					serviceranage:serviceranage,
+					servicearea:servicearea,
+					cellphone:cellphone,
+					verificationCode:verificationCode
+	         },     //传递的参数       
+	         function(data){ //服务器返回后执行的函数 参数 data保存的就是服务器发送到客户端的数据
+	        	 alert(data.message);
+	        	 showTips(data.message,"");	
+	        	 if(data.success){
+	        		 window.location="../pcportal/index.html";
+	        		}
+	         },   
+	         'json'  //数据传递的类型  json  
+	     );
+	}
+	
+}
+
+
+</script>
+</head>
+
+<body style="background:url(images/bjhong.jpg) #e74143 no-repeat; background-size:100%;" >
+
+
+
+
+
+
+
+<div style="opacity:0.9; position:relative; padding-top:10px; top:10px;" class="clearfix">
+<div class="bm_box_submit box_show_border clearfix" style="background:#f9d9da;" >
+<img src="images/baom_06.png" class="baomin_sb_logo"/>
+<div class="sub_div"><input type="text" placeholder="请输入姓名" /></div>
+<div class="sub_div"><input type="text" placeholder="请输入手机号码" /></div>
+<div class="sub_div"><input type="text" placeholder="请输入小区或公司名称" /></div>
+<div class="sub_div"><input type="text" placeholder="请输入您的职务" /></div>
+<div class="sub_div"><input type="text" placeholder="请输入您的邮箱" /></div>
+<div class="sub_div_p">请填写真实信息</div>
+<div class="sub_btn"><input type="button" value="提 交" id="bmsubmit" /></div>
+<img src="images/baom_11.png" width="70%" style="padding-bottom:10px;" />
+</div>
+</div>
+
+
+
+</body>
+</html>

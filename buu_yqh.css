@@ -1,0 +1,314 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
+body{ font-size:12px;font: normal 12px/1.4 Verdana, "Lantinghei SC", "Hiragino Sans GB", 'Microsoft YaHei', Helvetica, arial, simsun, sans-serif; margin:0px; padding:0px; background:#e7e7e7; color:#4c4c4c;}
+ul,ol{list-style-type:none;}
+select,input,img,select{vertical-align:middle;}
+input{ font-size:12px;}
+.font_m{ font-family:Tahoma, Geneva, sans-serif;}
+a{ 
+text-decoration:none;
+ color:#000;
+blr: expression(this.onFocus=this.blur());
+}
+
+a:hover{ text-decoration:none;}
+.clear{clear:both;}
+.hide{ display:none;}
+/* 大转盘样式 */
+a, button, input, textarea {
+-webkit-touch-callout: none;
+outline: 0;
+}
+button, input, select, textarea {
+font-family: "Microsoft YaHei",Arial,sans-serif;
+color: #444;
+}
+button, h1, h2, h3, h4, h5, h6, input, label, select, textarea {
+font-size: 100%;
+vertical-align: middle;
+font-family: "Microsoft YaHei",Helvetica;
+font-weight: 200;
+}
+article, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, input, legend, li, menu, ol, p, select, td, textarea, th, ul {
+margin: 0;
+padding: 0;
+}
+button, input, select, textarea {
+font-family: inherit;
+font-size: inherit;
+line-height: inherit;
+}
+input {
+line-height: normal;
+}
+button, input, optgroup, select, textarea {
+margin: 0;
+font: inherit;
+color: inherit;
+}
+*, :after, :before {
+box-sizing: content-box;
+}
+  input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  }
+  input[type=checkbox]:active,
+  input[type=radio]:active {
+
+  background:none;
+  }
+  input[type=checkbox]:hover {
+  border-color: #c6c6c6;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+  }
+  input[type=radio] {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  width: 20px;
+  height: 20px;
+  }
+  input[type=checkbox]:checked,
+  input[type=radio]:checked {
+  background: #fff;
+  }
+  input[type=radio]:checked::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 5px;
+  left:6px;
+  width: 7px;
+  height: 7px;
+  background: #666;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  }
+  button {
+  font-family: "microsoft yahei";
+  border: 0;
+  text-align: center;
+  outline: none;
+    -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+ input[type="button"], input[type="submit"], input[type="reset"],textarea {
+
+-webkit-appearance: none;
+appearance: none;
+-ms-appearance: none;
+-o-appearance: none;
+
+}
+.banner{display:block;width:100%;margin-left:auto;margin-right:auto;margin-bottom: 20px;}
+.banner .turnplate{display:block;width:100%;position:relative; text-align:center;}
+.banner .turnplate canvas.item{width:100%;}
+
+
+/* 清除浮动 begin*/
+.clearfix:after
+{
+content: '.';
+display: block;
+overflow: hidden;
+visibility: hidden;
+font-size: 0;
+line-height: 0;
+width: 0;
+height: 0;
+}
+
+.clearfix:after
+{
+clear: both;
+}
+
+.clearfix
+{
+zoom: 1;
+}
+
+
+
+
+
+
+
+.bm_show_box{ width:86%;  left:7%; background:#fff; min-height:91%;  top:4%; position:relative; }
+.baomin_top{ width:105%; height:230px; position:absolute; left:-2.5%; }
+
+
+.bm_info{position:absolute; top:230px; margin-bottom:5px;padding-left:4%; background:#fff; padding-right:3%; }
+.bm_yq_text{ font-size:12px;line-height:20px;  }
+.bm_info h1{ font-size:14px; height:20px; display:block; padding-left:22px; font-weight:normal;}
+.bm_info h1.h1{ background:url(images/about_07.png) no-repeat left; background-size:20px 20px; margin-top:10px; }
+.bm_info h1.h2{ background:url(images/about_10.png) no-repeat left; background-size:20px 20px;}
+.bm_info p{ padding:6px 22px 7px 22px;}
+
+
+.btn_bm span{ width:112px; height:37px; margin-top:10px; display:inline-block;}
+.btn_bm span.span1{ background:url(images/about_13.png) no-repeat; background-size:100%; float:right;}
+.btn_bm span.span2{ background:url(images/about_15.png) no-repeat; background-size:100%; margin-right:15px; }
+
+
+
+#box1,#box2,#box3,#box4{ }
+
+
+.box_show_border{
+background-color: #fff;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+border: 1px solid #999;
+border: 1px solid rgba(0,0,0,.2);
+border-radius: 1px;
+outline: 0;
+box-shadow: 0 0 2px rgba(0,0,0,0.2);
+border-radius: 2px;
+
+}
+
+
+.bm_box_submit{ 
+opacity:1;
+filter: alpha(opacity=1);
+ text-align:center;
+  width:86%;
+   position:relative;
+   left:7%;
+    background:#f5f6f6; 
+	top:4%; 
+	z-index:999;
+	margin-bottom:10px;
+	bottom:10px;
+ }
+.baomin_sb_logo{ width:120px; margin-top:20px;}
+.sub_div{ width:75%; margin:10px auto; height:30px; line-height:30px; position:relative; text-align:left;}
+.sub_div_p{ height:20px; width:75%;margin:0px auto; color:#e50012; line-height:10px;}
+.sub_div input[type=text],.sub_div input[type=tel],.sub_div textarea{ 
+width:97%; 
+border: 1px solid #dbdbdb;
+background: #fff; 
+height:30px;
+padding-left:3%;
+}
+.suggest_radio{ width:50%; line-height:20px;  height:20px;  margin-left:10px;  display:inline-table; position:absolute; right:3px; top:3px;}
+.suggest_radio label{ padding-left:3px; color:#3a3a3a;}
+.sub_btn{ width:75%; margin:10px auto;}
+.sub_btn input[type=button]{ 
+width:100%; 
+height:35px; 
+background:#e50012; 
+color:#fff; 
+font-size:16px;
+border:0px; 
+font-weight:600;
+border-radius: 50px;
+-moz-box-shadow: 2px 10px 15px #ccc;
+-webkit-box-shadow: 2px 10px 15px #ccc;
+box-shadow: 2px 10px 15px #ccc;
+}
+.submit_succes_info{ padding-top:10px;padding-bottom:10px; font-weight:300;}
+.bm_box_submit .bm_yq_text{ line-height:22px; text-align:left; padding:10px 11px;}
+.back_click{ width:38.5px; height:36.5px; position:absolute; right:6px; top:6px; background:url(images/baom_03.png); background-size:100%;}
+
+.jump_card{ 
+width:55%; 
+height:30px;
+display:block;
+border-radius:15px;
+color:#fff;
+margin:10px auto;
+margin-top:25px;
+line-height:30px; 
+background:#ff0404;
+font-size:1.3rem;
+font-weight:800;
+text-shadow: #402900 1px 1px 0;
+box-shadow: 0px 1px 3px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
+font-family:Tahoma, Geneva, sans-serif;
+}
+.submit_succes_info{ font-size:1rem; font-weight:600;}
+.buu_yhj{font-size:12px; padding-bottom:15px;text-shadow: #d1d1d1 1px 1px 0;}
+
+.showtips{position:fixed;bottom:50%;opacity:0;*opacity:1;background-color:rgba(0,0,0,.5); *border:1px solid #ccc; *background-color:#CCC;padding:10px 10px;border-radius:10px;left:50%;min-width:100px;max-width:80%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);margin-top:-10px;color:#fff;text-align: center;z-index: 10001;}
+.showtips.active{-webkit-animation:tips 2s;-o-animation:tips 2s;animation:tips 2s;}
+@-webkit-keyframes tips{
+	from{-webkit-transform: translateX(-50%) translateY(-60px)}
+	43%{-webkit-transform:translateX(-50%) translateY(0);opacity:1;}
+	70%{opacity:1}
+	to{opacity:0}
+}
+@-o-keyframes tips{
+	from{-o-transform:translateX(-50%) translateY(-60px)}
+	43%{-o-transform:translateX(-50%) translateY(0);opacity:1;}
+	70%{opacity:1}
+	to{opacity:0}
+}
+@keyframes tips{
+	from{transform:translateX(-50%) translateY(-60px)}
+	43%{transform:translateX(-50%) translateY(0);opacity:1;}
+	70%{opacity:1}
+	to{opacity:0}
+}
+
+
+.float-box{
+	top:0;
+	position:absolute;
+	z-index:111;
+	width:100%;
+	background:url(images/bj.png); 
+	min-height:100%;
+	background-size:100%;
+	right:-100%;
+	}
+.buu_cy_info{
+	font-size:27px;
+	color:#fff;
+    text-shadow: #b9191b 2px 2px 3px;
+	text-align:center;
+	padding-top:25px;
+	font-family:"微软雅黑";
+	font-weight:bold;
+}
+.buu_success_btn{
+   
+    display:block;
+    width:55%;
+    height:30px;
+	border:3px solid #fff;
+	border-radius:25px;
+	background:#ff0404;
+	font-size:1.3rem;
+    font-weight:800;
+    text-shadow: #402900 1px 1px 0;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
+    font-family:Tahoma, Geneva, sans-serif;
+	margin:40px auto 5px auto;
+	color:#fff;
+	line-height:30px;	
+}
+.buu_success_btn span{ font-family:"微软雅黑";}
+.colorf6b30e{ color:#f6b30e; font-size:15px; text-shadow:none;}
